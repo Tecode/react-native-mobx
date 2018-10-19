@@ -6,7 +6,7 @@ import { styles } from './style';
 const Home = ({ homeStore }) => {
     return (
         <View>
-            <Text style={styles.title}>首页{ homeStore.homeStore }</Text>
+            <Text style={styles.title}>首页{ homeStore.name }</Text>
         </View>
     )
 }

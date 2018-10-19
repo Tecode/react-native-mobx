@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Provider} from 'mobx-react';
 import Home from './components/Home';
+import allStores from './stores';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,7 +22,7 @@ const instructions = Platform.select({
 export default class App extends Component {
   render() {
     return (
-      <Provider homeStore={{homeStore: '45'}}>
+      <Provider {...allStores}>
         <View style={styles.container}>
           <Home/>
           <Text style={styles.welcome}>Welcome to React Native!</Text>
