@@ -15,8 +15,6 @@
     "react": "16.5.0",
     "react-native": "0.57.0",
     "react-navigation": "^2.18.0",
-    "react-navigation-mobx-helpers": "^2.0.0",
-    "react-router-native": "^4.3.0",
     "relay": "^0.8.0-1"
   },
   "devDependencies": {
