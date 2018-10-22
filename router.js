@@ -1,16 +1,20 @@
-import React from 'react';
-import { View } from 'react-native';
-import { Route } from 'react-router-native'
-import Home from './components/Home';
+import { createStackNavigator } from 'react-navigation';
+import HomeScreen from './components/Home';
 import Messenger from './components/Messenger';
 
 
 
-const Routers = () => (
-    <View>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/messenger" component={Messenger} />
-    </View>
+const Routers = createStackNavigator(
+    {
+        Home: {
+            screen: HomeScreen,
+        },
+        Messenger: {
+            screen: Messenger,
+        },
+    }, {
+        initialRouteName: 'Home',
+    }
 );
 
 export default Routers;
