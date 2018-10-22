@@ -1,10 +1,11 @@
 import { action, observable } from 'mobx';
-import { Alert } from 'react-native';
+// import { Alert } from 'react-native';
 
 class HomeStore {
-    @observable name = 'ReactNative';
+    @observable name = 'ReactNativeHot';
     @action.bound alert() {
-        Alert.alert('Mobx调用alert!')
+        console.log(12233);
+        // Alert.alert('Mobx调用alert!')
     }
 }
 
