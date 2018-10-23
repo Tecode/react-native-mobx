@@ -7,7 +7,7 @@ const Home = ({ navigation, homeStore }) => {
     return (
         <View style={styles.container}>
             <Button
-                title="打开抽屉"
+                title="打开抽屉2"
                 underlayColor="#f0f4f7"
                 onPress={() => {
                     navigation.openDrawer();

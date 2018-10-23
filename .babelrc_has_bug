@@ -1,10 +1,8 @@
 {
   "presets": [
-    "@babel/preset-env",
-    "module:metro-react-native-babel-preset"
+    "module:metro-react-native-babel-preset",
+    "@babel/preset-env"
   ],
-  "retainLines": true,
-  "sourceMaps": true,
   "plugins": [
     "@babel/plugin-transform-runtime",
     "@babel/plugin-syntax-dynamic-import",
@@ -12,5 +10,6 @@
     "@babel/plugin-proposal-json-strings",
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     ["@babel/plugin-proposal-class-properties", { "loose" : true }]
-  ]
+  ],
+  "sourceMaps": true
 }
