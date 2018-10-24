@@ -15,6 +15,11 @@ Or
 react-native start
 ```
 
+## Link Icon
+```
+react-native link react-native-vector-icons
+```
+
 ## Build
 - Build IOS
 

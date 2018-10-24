@@ -1,22 +1,26 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { ScrollView } from 'react-native';
+import { List, ListItem } from 'react-native-elements'
 import { inject, observer } from 'mobx-react';
 import { styles } from './style';
 
 const Home = ({ navigation, homeStore }) => {
     return (
-        <View style={styles.container}>
-            <Button
-                title="打开抽屉2"
-                underlayColor="#f0f4f7"
-                onPress={() => {
-                    navigation.openDrawer();
-                }} />
-            <Text style={styles.title}>首页{homeStore.name}</Text>
-            <Text style={styles.welcome}>Welcome to React Native!</Text>
-            <Text style={styles.instructions}>To get started, edit App.js</Text>
-        </View>
+        <ScrollView>
+            <List containerStyle={{ marginBottom: 20 }}>
+                {
+                    homeStore.listData.map((item) => (
+                        <ListItem
+                            roundAvatar
+                            avatar={{ uri: item.avatar_url }}
+                            subtitle={item.subtitle}
+                            key={item.name}
+                            title={item.name}
+                        />
+                    ))
+                }
+            </List>
+        </ScrollView>
     )
 }
-
 export default inject('homeStore')(observer(Home));
