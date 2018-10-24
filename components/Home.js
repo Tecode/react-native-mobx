@@ -1,8 +1,7 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import { inject, observer } from 'mobx-react';
-import { styles } from './style';
 
 const Home = ({ navigation, homeStore }) => {
     return (
@@ -23,4 +22,28 @@ const Home = ({ navigation, homeStore }) => {
         </ScrollView>
     )
 }
+
+const styles = StyleSheet.create({
+    title: {
+        color: '#333',
+        fontSize: 20
+    },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+    },
+    welcome: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+    },
+    instructions: {
+        textAlign: 'center',
+        color: '#333333',
+        marginBottom: 5,
+    },
+});
+
 export default inject('homeStore')(observer(Home));
