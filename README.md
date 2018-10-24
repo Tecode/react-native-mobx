@@ -1,4 +1,5 @@
-<h2 style="text-align: center;">ReactNative+Mobx Project</h2>
+<h2 align="center">ReactNative+Mobx Project</h2>
+<p align="center">A react-native template using advanced mobx Architecture and Babel7</p>
 
 ## Technologies
 
