@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
-import { DrawerActions } from 'react-navigation';
 
 const Messenger = ({ navigation }) => {
     return (
@@ -8,11 +7,9 @@ const Messenger = ({ navigation }) => {
             <Button
                 title="首页"
                 underlayColor="#f0f4f7"
-                onPress={() => {
-                    navigation.navigate('Drawer')
-                }}
+                onPress={() => {navigation.navigate('Drawer')}}
             />
-            <Text>消息中心3665454</Text>
+            <Text>hello world</Text>
         </View>
     )
 }

@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { createDrawerNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import Messenger from '../components/Messenger';
 import Drawer from '../components/Drawer';
 
 
-const AppDrawerNavigator = createDrawerNavigator(
+const AppDrawerNavigator = createStackNavigator(
     {
         Messenger: {
-            title: 'Messenger',
             screen: Messenger,
+            navigationOptions: () => ({
+                title: '1414',
+            }),
         },
         Drawer: {
             screen: Drawer,
+            navigationOptions: () => ({
+                title: '信息',
+            }),
         },
     }
 );

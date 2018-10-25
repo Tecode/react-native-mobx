@@ -1,12 +1,12 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import { inject, observer } from 'mobx-react';
 
 const Home = ({ navigation, homeStore }) => {
     return (
         <ScrollView>
-            <List containerStyle={{ marginBottom: 20 }}>
+            <List>
                 {
                     homeStore.listData.map((item) => (
                         <ListItem
