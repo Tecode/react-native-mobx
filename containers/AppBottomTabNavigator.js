@@ -11,13 +11,18 @@ const AppBottomTabNavigator = createBottomTabNavigator(
     {
         Home: {
             screen: HomeNavigator,
-            navigationOptions: () => ({
-                tabBarIcon: ({ tintColor }) => <Icon name='message' size={30} color={tintColor} />
-            })
+            navigationOptions: ({ navigation }) => {
+                return ({
+                    tabBarVisible: navigation.state.index !== 1,
+                    tabBarLabel: '消息',
+                    tabBarIcon: ({ tintColor }) => <Icon name='message' size={30} color={tintColor} />
+                })
+            }
         },
         Messenger: {
             screen: Messenger,
             navigationOptions: () => ({
+                tabBarLabel: '设置',
                 tabBarIcon: ({ tintColor }) => <Icon name='account-circle' size={32} color={tintColor} />
             })
         },
