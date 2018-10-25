@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-import { View, Text } from 'react-native';
-import Home from '../components/Home';
+import HomeNavigator from '../containers/AppHomeNavigator';
 import Messenger from '../containers/AppDrawerNavigator';
 
 
 
-const HomeNavigator = createStackNavigator(
-    {
-        Home: {
-            screen: Home,
-            navigationOptions: () => ({
-                title: '首页',
-            }),
-        },
-    });
 
 const AppBottomTabNavigator = createBottomTabNavigator(
     {
@@ -35,8 +25,8 @@ const AppBottomTabNavigator = createBottomTabNavigator(
     {
         initialRouteName: 'Home',
         tabBarOptions: {
-            activeTintColor: 'red',
-            inactiveTintColor: 'grey',
+            activeTintColor: '#EC414D',
+            inactiveTintColor: '#4c4c4c',
         }
     }
 );

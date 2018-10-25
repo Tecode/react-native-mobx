@@ -1,32 +1,41 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, StatusBar } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import { inject, observer } from 'mobx-react';
+import { NavigationActions } from 'react-navigation';
 
 const Home = ({ navigation, homeStore }) => {
     return (
-        <ScrollView>
-            <List>
-                {
-                    homeStore.listData.map((item) => (
-                        <ListItem
-                            roundAvatar
-                            avatar={{ uri: item.avatar_url }}
-                            subtitle={item.subtitle}
-                            key={item.name}
-                            title={item.name}
-                        />
-                    ))
-                }
-            </List>
-        </ScrollView>
+        <React.Fragment>
+            <StatusBar
+                backgroundColor="#EC414D"
+                barStyle="light-content"
+            />
+            <ScrollView>
+                <List containerStyle={styles.listStyle}>
+                    {
+                        homeStore.listData.map((item) => (
+                            <ListItem
+                                roundAvatar
+                                avatar={{ uri: item.avatar_url }}
+                                subtitle={item.subtitle}
+                                key={item.name}
+                                title={item.name}
+                                onPress={() => { navigation.navigate('Detail') }}
+                            />
+                        ))
+                    }
+                </List>
+            </ScrollView>
+        </React.Fragment>
     )
 }
 
 const styles = StyleSheet.create({
-    title: {
-        color: '#333',
-        fontSize: 20
+    listStyle: {
+        marginTop: 0,
+        borderTopWidth: 0,
+        borderBottomWidth: 0
     },
     container: {
         flex: 1,
