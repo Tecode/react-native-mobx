@@ -13,10 +13,12 @@ const HomeNavigator = createStackNavigator(
                 headerTitleStyle: {
                     flex: 1,
                     textAlign: 'center',
-                    fontSize: 16
+                    fontSize: 16,
+                    color: '#fff'
                 },
                 headerStyle: {
-                    backgroundColor: '#f1f1f1', //#EC414D
+                    backgroundColor: '#EC414D', //#EC414D
+                    height: 30
                 },
             }),
         },

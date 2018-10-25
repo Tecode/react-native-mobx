@@ -2,7 +2,6 @@ import React from 'react';
 import { ScrollView, StyleSheet, StatusBar } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import { inject, observer } from 'mobx-react';
-import { NavigationActions } from 'react-navigation';
 
 const Home = ({ navigation, homeStore }) => {
     return (
