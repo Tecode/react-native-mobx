@@ -1,3 +1,4 @@
+import React from 'react'
 import {
     View,
     Text,
@@ -53,8 +54,22 @@ AppBottomTabNavigator.navigationOptions = ({ navigation }) => {
 };
 
 const AppDrawerNavigator = createDrawerNavigator({
-    Home: AppStackNavigator
-})
+    Home: {
+        screen: AppStackNavigator,
+        contentOptions: {
+            activeTintColor: '#EC414D',
+            itemsContainerStyle: {
+              marginVertical: 0,
+            },
+            iconContainerStyle: {
+              opacity: 1
+            },
+          }
+    },
+}, {
+    
+    }
+)
 
 export default createSwitchNavigator({
     AuthLoading: AuthLoadingScreen,

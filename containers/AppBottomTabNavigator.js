@@ -8,14 +8,15 @@ import SettingsScreen from '../components/SettingsScreen';
 
 
 const AppBottomTabNavigator = createBottomTabNavigator({
-    HomeScreen: {
+    消息: {
+        routeName: '消息',
         screen: HomeScreen,
         navigationOptions: () => ({
             tabBarLabel: '消息',
             tabBarIcon: ({ tintColor }) => <Icon name='message' size={30} color={tintColor} />
         })
     },
-    Settings: {
+    设置: {
         screen: SettingsScreen,
         navigationOptions: () => ({
             tabBarLabel: '设置',
@@ -24,7 +25,7 @@ const AppBottomTabNavigator = createBottomTabNavigator({
 
     }
 }, {
-        initialRouteName: 'HomeScreen',
+        initialRouteName: '消息',
         tabBarOptions: {
             activeTintColor: '#EC414D',
             inactiveTintColor: '#4c4c4c',
