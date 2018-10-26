@@ -20,7 +20,7 @@ const Home = ({ navigation, homeStore }) => {
                                 subtitle={item.subtitle}
                                 key={item.name}
                                 title={item.name}
-                                onPress={() => { navigation.navigate('Detail') }}
+                                onPress={() => { navigation.navigate('DetailScreen') }}
                             />
                         ))
                     }
