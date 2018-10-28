@@ -1,41 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react'
 import { createBottomTabNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
-import { View, Text } from 'react-native';
-import Home from '../components/Home';
-import Messenger from '../components/Messenger';
+import HomeScreen from '../components/HomeScreen';
+import SettingsScreen from '../components/SettingsScreen';
 
 
 
-const AppBottomTabNavigator = createBottomTabNavigator(
-    {
-        Home: {
-            screen: Home,
-            navigationOptions: () => ({
-                headerTitle: <View><Text>46</Text></View>,
-                tabBarIcon: ({ tintColor }) => <Icon name='message' size={30} color={tintColor} />
-            })
-        },
-        Messenger: {
-            screen: Messenger,
-            navigationOptions: () => ({
-                tabBarLabel: `设置`,
-                tabBarIcon: ({ tintColor }) => <Icon name='account-circle' size={32} color={tintColor} />
-            })
-        },
+
+const AppBottomTabNavigator = createBottomTabNavigator({
+    消息: {
+        routeName: '消息',
+        screen: HomeScreen,
+        navigationOptions: () => ({
+            tabBarLabel: '消息',
+            tabBarIcon: ({ tintColor }) => <Icon name='message' size={30} color={tintColor} />
+        })
     },
-    {
-        initialRouteName: 'Home',
-        shifting: true,
-        tabBarOptions: {
-            activeTintColor: 'red',
-            inactiveTintColor: 'grey',
-        }
-    }
-);
+    设置: {
+        screen: SettingsScreen,
+        navigationOptions: () => ({
+            tabBarLabel: '设置',
+            tabBarIcon: ({ tintColor }) => <Icon name='account-circle' size={32} color={tintColor} />
+        })
 
-export default class App extends Component {
-    render() {
-        return <AppBottomTabNavigator />
     }
-};
+}, {
+        initialRouteName: '消息',
+        tabBarOptions: {
+            activeTintColor: '#EC414D',
+            inactiveTintColor: '#4c4c4c',
+        }
+    })
+
+export default AppBottomTabNavigator;
