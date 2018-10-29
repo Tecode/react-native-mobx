@@ -1,16 +1,29 @@
 import React from 'react';
-import { ScrollView, StyleSheet, StatusBar } from 'react-native';
+import { ScrollView, StyleSheet, StatusBar, RefreshControl } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import { inject, observer } from 'mobx-react';
 
 const Home = ({ navigation, homeStore }) => {
+    const { refreshing, setValue } = homeStore;
+    const handleRefresh = () => {
+        setValue('refreshing', true);
+        setTimeout(()=> {
+            setValue('refreshing', false);
+        }, 1000);
+    }
     return (
         <React.Fragment>
             <StatusBar
                 backgroundColor="#EC414D"
                 barStyle="light-content"
             />
-            <ScrollView>
+            <ScrollView
+                refreshControl={
+                    <RefreshControl
+                        title={"拼命加载中..."}
+                        refreshing={refreshing}
+                        onRefresh={handleRefresh}
+                    />} >
                 <List containerStyle={styles.listStyle}>
                     {
                         homeStore.listData.map((item) => (

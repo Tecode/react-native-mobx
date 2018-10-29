@@ -1,11 +1,20 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, FlatList } from 'react-native'
 
 
 const Detail = () => {
+    const array = [
+        { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' }, { key: 'a' }, { key: 'b' },
+        { key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },
+        { key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },
+        { key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },{ key: 'a' }, { key: 'b' },
+    ];
     return (
         <View>
-            <Text>详情页面</Text>
+            <FlatList
+                data={array}
+                renderItem={({ item }) => <Text>{item.key}</Text>}
+            />
         </View>
     )
 };

@@ -6,7 +6,7 @@ import {
     TouchableOpacity
 } from "react-native";
 
-import { createSwitchNavigator, createStackNavigator, createDrawerNavigator, createBottomTabNavigator } from 'react-navigation'
+import { createSwitchNavigator, createStackNavigator, createDrawerNavigator } from 'react-navigation'
 import AuthLoadingScreen from '../components/AuthLoadingScreen'
 import DetailScreen from '../components/DetailScreen'
 import AuthStackNavigator from './AuthStackNavigator';
