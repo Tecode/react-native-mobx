@@ -8,6 +8,11 @@
 - ReactNative V0.57.0
 - React-navigation V2.18.0
 
+## Demo
+<div align="center">
+<img src="https://im.ezgif.com/tmp/ezgif-1-4baecba64d81.gif" />
+</div>
+
 ## Run Server
 ```bash
 react-native start --reset-cache
