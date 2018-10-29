@@ -52,5 +52,16 @@ react-native run-android
       react-native: 0.57.0 => 0.57.0 
     npmGlobalPackages:
       react-native-cli: 2.0.1
-
+      
+  React Native Environment Info:
+      System:
+        OS: Windows 10
+        CPU: x64 Intel(R) Core(TM) i5-3337U CPU @ 1.80GHz
+        Memory: 3.42 GB / 7.88 GB
+      Binaries:
+        Yarn: yarn install v0.21.3
+  [1/4] Resolving packages...
+  success Already up-to-date.
+  Done in 5.33s. - C:\Program Files (x86)\Yarn\bin\yarn.CMD
+        npm: 4.0.5 - C:\Program Files\nodejs\npm.CMD
 ```
