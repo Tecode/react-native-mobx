@@ -10,7 +10,7 @@
 
 ## Demo
 <div align="center">
-<img src="https://im.ezgif.com/tmp/ezgif-1-4baecba64d81.gif" />
+<img src="http://oqijmys6p.bkt.clouddn.com/ezgif-1-4baecba64d81.gif" />
 </div>
 
 ## Run Server
